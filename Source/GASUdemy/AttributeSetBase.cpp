@@ -14,6 +14,8 @@ UAttributeSetBase::UAttributeSetBase()
 
 void UAttributeSetBase::PostGameplayEffectExecute(const struct FGameplayEffectModCallbackData& Data)
 {
+	Super::PostGameplayEffectExecute(Data);
+
 	UE_LOG(LogTemp, Warning, TEXT("i took damaged"));
 
 	if (Data.EvaluatedData.Attribute.GetUProperty() ==
